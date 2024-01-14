@@ -21,6 +21,11 @@ boot:
     mov %ax, %gs
     mov %ax, %ss
 
+    mov $boot, %rsp
+    mov $0xe, %ah
+    mov $'L', %al
+    
+    int $0x10
     jmp .
     
 .section boot_end, "ax"
