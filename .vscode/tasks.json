@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "写映像文件 Write Image File",
+            "type": "shell",
+            "windows": {
+                "command": "$(workspaceRoot)/script/img-write-win.bat"
+            },
+            "osx": {
+                "command": "bash ${workspaceRoot}/script/img-write-osx.sh"
+            },
+            "linux": {
+                "command": "bash ${workspaceRoot}/script/img-write-linux.sh"
+            },
+            "options": {
+                "cwd": "${workspaceRoot}/build/image/"
+            }
+        }
+    ]
+}
