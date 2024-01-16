@@ -6,5 +6,3 @@
 # Author: xk2013
 # E-Mail: hzk201312@163.com
 #
-
-add_subdirectory(./shell)
