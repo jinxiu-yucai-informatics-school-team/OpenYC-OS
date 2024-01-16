@@ -13,6 +13,8 @@ project(OpenYC-OS)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_VERBOSE_MAKEFILE On)
+set(EXECUTABLE_OUTPUT_PATH ./build/bin)
+set(LIBRARY_OUTPUT_DIRECTORY ./build/lib)
 set(PROJECT_BINARY_DIR ./build)
 
 add_subdirectory(./src/boot)
