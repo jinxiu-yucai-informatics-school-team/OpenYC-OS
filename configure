@@ -1,0 +1,2 @@
+echo "Configure Project with Platform 'Linux'"
+cp Makefiles/Linux.mak Makefile
