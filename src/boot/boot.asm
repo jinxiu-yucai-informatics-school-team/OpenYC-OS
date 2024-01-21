@@ -1,10 +1,21 @@
+; Copyright (C) 2024-present Jinxiu Yucai Informatics School Team
 ;
-; Copyright (c) 2024-present Jinxiu Yucai Informatics School Team
-; All rights reserved.
+; This program is free software: you can redistribute it and/or modify
+; it under the terms of the GNU Affero General Public License as published
+; by the Free Software Foundation, either version 3 of the License, or any
+; later version.
 ;
-; Create Time: 2024/01/19
-; Author: xk2013
-; E-Mail: hzk201312@163.com
+; This program is distributed in the hope that it will be useful,
+; but WITHOUT ANY WARRANTY; without even the implied warranty of
+; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+; GNU Affero General Public License for more details.
+;
+; You should have received a copy of the GNU Affero General Public License
+; along with this program.  If not, see <https://www.gnu.org/licenses/>.
+;
+; CREATE TIME: 2024/01/19
+; AUTHOR: xk2013
+; E-MAIL: hzk201312@163.com
 ;
 
 org 0x7c00
@@ -33,17 +44,17 @@ start:
     mov dx, ds
     mov es, dx
     mov dx, 0x0000
-    mov bp, StartBootMessage
+    mov bp, message
     int 0x10
 
-    ; reset floppy
+    ; 重置软盘
     xor ah, ah
     xor dl, dl
     int 0x13
 
     hlt
 
-StartBootMessage:
+message:
     db "Loading System Loader... "
     db 0x0d
     db 0x0a
